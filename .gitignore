@@ -7,6 +7,7 @@ server/node_modules
 dist
 dist-ssr
 *.local
+.env
 
 # Logs
 logs
@@ -21,7 +22,7 @@ lerna-debug.log*
 .DS_Store
 
 # Tests
-/coverage
+server/coverage
 /.nyc_output
 
 # IDEs and editors

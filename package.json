@@ -7,5 +7,18 @@
   "workspaces": [
     "client",
     "server"
-  ]
+  ],
+  "scripts": {
+    "start:dev": "concurrently \"yarn start:devserver\" \"yarn start:devclient\"",
+    "start:prod": "concurrently \"yarn start:prodserver\" \"yarn start:prodclient\"",
+    "build:server": "yarn workspace server build",
+    "start:devserver": "yarn workspace server start:dev",
+    "start:prodserver": "yarn workspace server start:prod",
+    "build:client": "yarn workspace client build",
+    "start:devclient": "yarn workspace client dev",
+    "start:prodclient": "yarn workspace client serve"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  }
 }
